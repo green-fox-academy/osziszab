@@ -4,16 +4,10 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class CenterBoxFunction {
+public class Checkerboard {
+    public static void mainDraw(Graphics graphics) {
+        // Fill the canvas with a checkerboard pattern.
 
-    public static void mainDraw(Graphics graphics){
-        // create a square drawing function that takes 2 parameter:
-        // the square size and the graphics
-        // and draws a square of that size to the center of the canvas.
-        // draw 3 squares with that function.
-        // avoid code duplication.
-            int x=50;
-            square(graphics,x);
 
 
     }
@@ -38,19 +32,27 @@ public class CenterBoxFunction {
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
             mainDraw(graphics);
+
+            int x = 0;
+            int y = 0;
+
+            for(int i=0; i<32; i++){
+
+                for( int j=0; j<16; j++){
+                    graphics.setColor(Color.black);
+                    graphics.fillRect(x,y,10,10);
+                    x+=20;
+                }
+                y+=10;
+                if(i%2==0){
+                    x=10;
+                }
+                if(i%2==1){
+                    x=0;
+                }
+            }
+
+
         }
-    }
-    public static void square(Graphics graphics, int x){
-
-        for (int i=0; i<3; i++){
-
-            graphics.setColor(Color.black);
-            graphics.drawRect(160-(x/2),160-(x/2),x,x);
-            x+=50;
-
-
-        }
-
-
     }
 }
