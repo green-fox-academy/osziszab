@@ -4,13 +4,17 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
+public class FourRectangles {
 
-public class SquareInTheCenter {
-    public  static void mainDraw(Graphics graphics) {
-        // Draw a green 10x10 square to the canvas' center.
+    public static void mainDraw(Graphics graphics){
+        // draw four different size and color rectangles.
+        // avoid code duplication.
+        int size1=0;
+        int size2=0;
+        int j=10;
 
 
-
+        rect(graphics,size1,size2, j);
     }
 
     // Don't touch the code below
@@ -33,15 +37,18 @@ public class SquareInTheCenter {
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
             mainDraw(graphics);
-
-            graphics.setColor(Color.green);
-            graphics.fillRect(155,155,10,10);
-
-
-
         }
     }
+    public static void  rect (Graphics graphics,int first, int second,int j ){
 
+        for(int i=0; i<4;i++){
 
+            j+=30;
+            graphics.setColor(new Color(10+j,20+j,30+j));
+            graphics.fillRect(10+j, 20+j ,first+j,second+i+j);
+
+        }
+
+    }
 
 }

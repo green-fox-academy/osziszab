@@ -4,12 +4,18 @@ import java.awt.*;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
+public class PositionSquare {
 
-public class SquareInTheCenter {
-    public  static void mainDraw(Graphics graphics) {
-        // Draw a green 10x10 square to the canvas' center.
+    public static void mainDraw(Graphics graphics){
+        // create a square drawing function that takes 3 parameters:
+        // the x and y coordinates of the square's top left corner and the graphics
+        // and draws a 50x50 square from that point.
+        // draw 3 squares with that function.
+        // avoid code duplication.
 
-
+        int x=10;
+        int y=10;
+        position(graphics,x,y);
 
     }
 
@@ -33,15 +39,22 @@ public class SquareInTheCenter {
         protected void paintComponent(Graphics graphics) {
             super.paintComponent(graphics);
             mainDraw(graphics);
-
-            graphics.setColor(Color.green);
-            graphics.fillRect(155,155,10,10);
-
-
-
         }
     }
 
+    public static void position(Graphics graphics,int x,int y  ){
 
+        for (int i=0; i<3; i++){
+
+            graphics.setColor(Color.black);
+            graphics.fillRect(x,y,50,50);
+
+
+            y+=60;
+
+
+        }
+
+    }
 
 }
