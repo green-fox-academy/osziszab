@@ -17,10 +17,6 @@ public class DivideByZero {
         }catch (ArithmeticException ex){
             System.err.println("fail");
         }
-
-
-
-
     }
     public static int takenumber(int number){
 
