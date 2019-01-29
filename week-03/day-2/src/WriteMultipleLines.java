@@ -35,7 +35,7 @@ public class WriteMultipleLines {
             Files.write(pathOfTheFile, content);
 
         }catch (Exception ex){
-
+            System.out.println("apple");
         }
     }
 }
