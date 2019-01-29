@@ -25,6 +25,6 @@ public class DivideByZero {
     public static int takenumber(int number){
 
         int result = 10 / number;
-        return result;0
+        return result;
     }
 }
