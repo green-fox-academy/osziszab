@@ -6,12 +6,13 @@ public class NumberAdder {
 
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
-        addsOne(n);
+        System.out.println(addsOne(n));
     }
-    public static void addsOne(int n) {
+    public static int addsOne(int n) {
         if (n >= 1) {
             addsOne(n-1);
-        System.out.println(n);
+            n+=n;
         }
+        return n;
     }
 }
