@@ -6,7 +6,6 @@ public class Counter {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         counter(n);
-
     }
     public static void counter(int n) {
         if (n >= 0) {
