@@ -11,9 +11,10 @@ public class Bunny1 {
     }
     public static int countEars(int bunnies){
         int numberOfEars = 0;
-        if(bunnies > 0){
-            numberOfEars =(bunnies+bunnies);
+        if(bunnies <= 0){
+            return 0;
         }
+        numberOfEars =countEars(bunnies-1)+2;
         return numberOfEars;
     }
 }
