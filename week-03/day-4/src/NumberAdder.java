@@ -9,10 +9,9 @@ public class NumberAdder {
         System.out.println(addsOne(n));
     }
     public static int addsOne(int n) {
-        if (n >= 1) {
-            addsOne(n-1);
-            n+=n;
+        if (n == 1) {
+            return 1;
         }
-        return n;
+        return n + addsOne(n - 1);
     }
 }

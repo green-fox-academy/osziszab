@@ -11,10 +11,9 @@ public class Power {
         System.out.println(power(base, n));
     }
     public static int power (int base, int n){
-        if (n != 2){
-            base =  power(base, n-1 );
+        if (n == 1){
+            return base;
         }
-        base *= base;
-        return base;
+        return(base* power(base, n-1));
     }
 }
