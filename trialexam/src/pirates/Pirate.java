@@ -15,7 +15,7 @@ public class Pirate {
         this.captain = false;
         this.woodenLeg = false;
     }
-    public String work(boolean captain, boolean woodenLeg){
+    public String work(){
         if (captain==true) {
             gold += 10;
             healthPoints -= 5;
@@ -29,7 +29,7 @@ public class Pirate {
              return "Hello, I'm Jack. I still have my real legs and 20 golds.";
          }
     }
-    public String party (boolean captain, boolean woodenLeg){
+    public String party (){
         if(captain==true){
             healthPoints += 10;
         }else{
