@@ -1,0 +1,22 @@
+The ternary operator is an operator that exists in some programming languages, which takes three operands rather than the typical one or two that most operators use. It provides a way to shorten a simple if else block.
+For example:
+var num = 4, msg = "";
+if (num === 4) {
+  msg = "Correct!";
+}
+else {
+  msg = "Incorrect!";
+}
+alert(msg);
+
+If the num variable is equal to 4, then the user will get a "Correct!" message. Otherwise, the user receives an "Incorrect!" message. With this type of comparison, you can shorten the code using the ternary operator. Below is an example of how it works.
+variable_name = (condition) ? value_if_true : value_if false;
+A ternary operator allows you to assign one value to the variable if the condition is true, and another value if the condition is false.
+
+The if else block example from above could now be written as shown in the example below.
+
+var num = 4, msg = "";
+msg = (num === 4) ? "Correct!" : "Incorrect!";
+alert(msg);
+
+In many cases, this can make the assignment of a value to a variable easier to see, because it is contained on a single line instead of an if else block.

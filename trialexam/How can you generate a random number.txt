@@ -1,0 +1,1 @@
+You can do it by using Math.random(); function. Before you use it you have to import- import java.util.Random; that function.
