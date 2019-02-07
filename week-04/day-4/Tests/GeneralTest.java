@@ -4,6 +4,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 public class GeneralTest {
@@ -24,5 +28,28 @@ public class GeneralTest {
     public void getAppleTest3() {
         Apples alma3 = new Apples("apple");
         assertEquals("apple", alma3.getApple("apple"));
+    }
+
+    //------------------------------------------------------------------------
+    @Test
+    public void sumOFElementsTest1(){
+        List<Integer> elements = Arrays.asList(new Integer[]{5, -4, 3});
+        Sum example1 = new Sum();
+        assertEquals(4,example1.sumOFElements(elements));
+    }
+
+    @Test
+    public void sumOFElementsTest2(){
+        List<Integer> elements = Arrays.asList(new Integer[]{});
+        Sum example1 = new Sum();
+        assertEquals(null,example1.sumOFElements(elements));
+    }
+
+    @Test
+    public void sumOFElementsTest3(){
+        List<Integer> elements = new ArrayList<>();
+        elements.add(4);
+        Sum example1 = new Sum();
+        assertEquals(4,example1.sumOFElements(elements));
     }
 }
