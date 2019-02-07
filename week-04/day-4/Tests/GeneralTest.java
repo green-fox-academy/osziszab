@@ -52,4 +52,17 @@ public class GeneralTest {
         Sum example1 = new Sum();
         assertEquals(4,example1.sumOFElements(elements));
     }
+//-------------------------------------------------------------------------
+    @Test
+    public void isAnagramTest(){
+        Anagram test = new Anagram();
+        assertTrue(test.isAnagram("elbow","below"));
+    }
+
+    @Test
+    public void isAnagramTest2(){
+        Anagram test = new Anagram();
+        assertFalse(test.isAnagram("elbog","below"));
+    }
 }
+
