@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -65,8 +66,23 @@ public class GeneralTest {
         assertFalse(test.isAnagram("elbog","below"));
     }
 //-------------------------------------------------------------------------
+    @Test
+    public void countLettersTest (){
+     CountLetters letters = new CountLetters();
+     letters.countLetters("word");
+        HashMap<Character, Integer> expectedMap = new HashMap<>();
+        expectedMap.put('d', 1);
+        expectedMap.put('l', 1);
+        expectedMap.put('f', 2);
+        expectedMap.put('o', 2);
+        expectedMap.put('r', 3);
+        expectedMap.put('w', 2);
+        expectedMap.put('a', 2);
+        expectedMap.put('c', 1);
+        expectedMap.put('t', 1);
 
+        assertEquals(expectedMap, letters.countLetters("worldofwarcraft"));
 
-
+    }
 }
 
