@@ -10,11 +10,4 @@ public class Tree extends Plant {
         this.waterAbsorbtion = 0.40;
     }
 
-    public  void status(){
-        if(waterNeed < 10){
-            System.out.println("The " + color + " Tree needs water.");
-        }else {
-                System.out.println("The " + color + " Tree doesn't needs water.");
-        }
-    }
 }

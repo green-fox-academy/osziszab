@@ -12,6 +12,10 @@ public class Plant {
     }
 
     public  void status(){
-
+        if(waterNeed < 5){
+            System.out.println("The " + color + " " + this.getClass() + " needs water.");
+        } else {
+            System.out.println("The " + color + " " + this.getClass() + " doesn't needs water.");
+        }
     }
 }
