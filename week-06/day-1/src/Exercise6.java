@@ -7,7 +7,7 @@ public class Exercise6 {
 
         String text = "ahjkdfhakGHFAajdkaGHAGshd";
         List<Character> list = text.chars()
-                .mapToObj((i) -> Character.valueOf((char)i))
+                .mapToObj((i) -> Character.valueOf((char) i))
                 .collect(Collectors.toList());
         List<Character> upperLetters = list.stream()
                 .filter(Character::isUpperCase)
