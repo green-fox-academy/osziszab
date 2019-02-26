@@ -3,11 +3,11 @@ package com.greenfoxacademy.springstart.controllers;
 public class Greeting {
 
    private long id;
-   private String contnet;
+   private String content;
 
-   public Greeting(int id, String contnet){
+   public Greeting(int id, String content){
        this.id = id;
-       this.contnet = contnet;
+       this.content = content;
    }
 
    public long getId(){
@@ -15,6 +15,6 @@ public class Greeting {
    }
 
    public String getContnet(){
-       return contnet;
+       return content;
    }
 }
