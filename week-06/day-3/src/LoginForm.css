@@ -1,37 +1,51 @@
 body{
-    background-color: gainsboro;
+    background-color: lightgrey;
+    font-family: "Microsoft PhagsPa";
 }
-.box{
+
+.loginBox {
     width: 400px;
     height: 400px;
-    border: 1px solid white;
-    padding: 25px;
-    margin: 300px;
     background-color: white;
     position:absolute;
     top:50%;
     left:50%;
-    margin-top:-200px;
-    margin-left:-200px;
-    border-radius: 2px;
+    margin-top:-200px; /* this is half the height of your div*/
+    margin-left:-200px; /*this is half of width of your div*/
 }
-p{
-    font-size: 25px;
-    text-align: -webkit-left;
+
+
+.boxInBox{
+    margin: 50px;
 }
-p,h2,h3 {
-    color: darkslategrey;
-    font-family: "Microsoft PhagsPa";
+
+h1{
+    font-weight: normal;
+    font-size: 20px;
 }
-h2{
-    font-size: 11px;
-}
-h3{
+
+.inputInfo{
+    padding-top: 20px;
     font-size: 10px;
 }
-input[type="text"]
-input[type="password"]{
-    display: block;
-    margin-bottom: 20px;
-    padding: 10px 10px 10px 50px;
+
+.passwordEye{
+    background: url("oneeye.png") no-repeat;
+    background-position: right;
+    background-size: 5%;
 }
+
+.forgotPass{
+    font-size: 9px;
+    text-align: right;
+}
+
+.submitButton{
+    padding: 15px 40px;
+    margin-top: 10px;
+    color: white;
+    border-radius: 30px;
+    background-color: black;
+    border-style: hidden;
+}
+
