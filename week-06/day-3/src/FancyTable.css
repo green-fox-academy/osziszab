@@ -1,0 +1,27 @@
+table , th ,tr ,td {
+    border: 2px solid darkslategrey;
+    border-collapse: collapse;
+    font-family: "Arial Narrow";
+    font-size: 25px;
+    width: 650px;
+    padding: 25px;
+}
+
+th{
+    text-align: left;
+    font-size: 33px;
+    background-color: black;
+    color: aliceblue;
+}
+
+tr {
+    background: gainsboro;
+}
+
+tr:nth-child(2n + 1) {
+    background: ghostwhite;
+}
+
+body {
+    background-color: dodgerblue;
+}
