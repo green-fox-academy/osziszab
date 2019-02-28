@@ -4,10 +4,9 @@ import com.greenfoxacademy.basicwebshop.models.ShopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,14 +32,14 @@ public class MainController {
     @RequestMapping(value = "/only-available")
     public String onlyAvailable(Model model) {
         List<ShopItem> avaliables = itemList.stream()
-                .filter(shopItem -> shopItem.getQuantityOfStock()>0)
+                .filter(shopItem -> shopItem.getQuantityOfStock() > 0)
                 .collect(Collectors.toList());
         model.addAttribute("onlyAvailable", avaliables);
         return "avaliable";
     }
 
     @RequestMapping(value = "/cheapest-first")
-    public String cheapestFirst(Model model){
+    public String cheapestFirst(Model model) {
         model.addAttribute("cheapestFirst", itemList.stream()
                 .sorted(Comparator.comparing(ShopItem::getPrice)
                 ).collect(Collectors.toList()));
@@ -48,13 +47,22 @@ public class MainController {
     }
 
     @RequestMapping(value = "contains-nike")
-    public String containsNike(Model model){
+    public String containsNike(Model model) {
         List<ShopItem> nike = itemList.stream()
-                .filter(shopItem -> shopItem.getDescription().contains("Nike")||shopItem.getDescription().contains("nike"))
+                .filter(shopItem -> shopItem.getDescription().contains("Nike") || shopItem.getDescription().contains("nike") || shopItem.getName().contains("Nike") || shopItem.getName().contains("nike"))
                 .collect(Collectors.toList());
         model.addAttribute("containsNike", nike);
         return "nike";
     }
 
+    @RequestMapping(value = "average-stock")
+    public String avrageStock(Model model) {
+        double avrage = itemList.stream()
+                .mapToInt(s -> s.getQuantityOfStock())
+                .summaryStatistics()
+                .getAverage();
+        model.addAttribute("avrageStock", "Average stock" + avrage);
+        return "avrage";
+    }
 
 }

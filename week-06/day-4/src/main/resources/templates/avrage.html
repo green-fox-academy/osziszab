@@ -10,10 +10,10 @@
     <h1>My Shop</h1>
     <div class="line"></div>
     <div class="links">
+        <a href="/home">HOME</a>
         <a href="/only-available">ONLY AVAILABLE</a>
         <a href="/cheapest-first">CHEAPEST FIRST</a>
         <a href="contains-nike">CONTAINS NIKE</a>
-        <a href="/average-stock">AVERAGE STOCK</a>
         <a href="url">link text</a>
     </div>
     <div class="searchBox">
@@ -30,7 +30,7 @@
             <th>Price</th>
             <th>Quantity of stock</th>
         </tr>
-        <tr th:each="item : ${allItem}">
+        <tr th:each="item : ${avrageStock}">
             <td th:text="${item.getName()}"></td>
             <td th:text="${item.getDescription()}"></td>
             <td th:text="${item.getPrice()} + ' Ft'"></td>
