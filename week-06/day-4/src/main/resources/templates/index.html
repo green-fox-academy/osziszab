@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Webshop</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<h1>My Shop</h1>
+<body>
+    <div class="links">
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+        <a href="url">link text</a>
+    </div>
+    <div class="searchBox">
+        <form method="get" action="http://index.hu">
+        <p>Search for:</p>
+        <input type="search" placeholder="...something like nike" class="searchBar" >
+        <input type="submit" value="Search" class="searchButton">
+        </form>
+    </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity of stock</th>
+        </tr>
+        <tr th:each="item : ${items}">
+            <td th:text="${item.getName()}"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
