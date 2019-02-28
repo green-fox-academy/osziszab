@@ -10,7 +10,7 @@
     <h1>My Shop</h1>
     <div class="line"></div>
     <div class="links">
-        <a href="/only-available">ONLY AVAILABLE</a>
+        <a href="/home">HOME</a>
         <a href="/cheapest-first">CHEAPEST FIRST</a>
         <a href="contains-nike">CONTAINS NIKE</a>
         <a href="url">link text</a>
@@ -30,13 +30,12 @@
             <th>Price</th>
             <th>Quantity of stock</th>
         </tr>
-        <tr th:each="item : ${allItem}">
+        <tr th:each="item : ${onlyAvailable}">
             <td th:text="${item.getName()}"></td>
             <td th:text="${item.getDescription()}"></td>
-            <td th:text="${item.getPrice()} + ' Ft'"></td>
+            <td th:text="${item.getPrice()}"></td>
             <td th:text="${item.getQuantityOfStock()}"></td>
         </tr>
     </table>
 </div>
 </body>
-</html>

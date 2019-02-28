@@ -7,27 +7,54 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Controller
 public class MainController {
 
     private List<ShopItem> itemList = new ArrayList<>();
 
-    public MainController(){
-        itemList.add(new ShopItem("Running Shoes","Nike running shoes for every day sport",1000 ,5));
-        itemList.add(new ShopItem("Printer","Some HP printer that will print pages",3000,2));
-        itemList.add(new ShopItem("Coca Cola","0,5l standard coke",25,0));
-        itemList.add(new ShopItem("T-shirt","Bluew with a corgi ona a bike",300,1));
+    public MainController() {
+        itemList.add(new ShopItem("Running Shoes", "Nike running shoes for every day sport", 1000, 5));
+        itemList.add(new ShopItem("Printer", "Some HP printer that will print pages", 3000, 2));
+        itemList.add(new ShopItem("Coca Cola", "0,5l standard coke", 25, 0));
+        itemList.add(new ShopItem("T-shirt", "Bluew with a corgi ona a bike", 300, 1));
     }
 
-    @RequestMapping(value="/home")
-    public String allItem(Model model){
-        model.addAttribute("allItem",itemList );
+    @RequestMapping(value = "/home")
+    public String allItem(Model model) {
+        model.addAttribute("allItem", itemList);
         return "index";
     }
 
-  //  @RequestMapping(value="/home")
+    @RequestMapping(value = "/only-available")
+    public String onlyAvailable(Model model) {
+        List<ShopItem> avaliables = itemList.stream()
+                .filter(shopItem -> shopItem.getQuantityOfStock()>0)
+                .collect(Collectors.toList());
+        model.addAttribute("onlyAvailable", avaliables);
+        return "avaliable";
+    }
+
+    @RequestMapping(value = "/cheapest-first")
+    public String cheapestFirst(Model model){
+        model.addAttribute("cheapestFirst", itemList.stream()
+                .sorted(Comparator.comparing(ShopItem::getPrice)
+                ).collect(Collectors.toList()));
+        return "cheapest";
+    }
+
+    @RequestMapping(value = "contains-nike")
+    public String containsNike(Model model){
+        List<ShopItem> nike = itemList.stream()
+                .filter(shopItem -> shopItem.getDescription().contains("Nike")||shopItem.getDescription().contains("nike"))
+                .collect(Collectors.toList());
+        model.addAttribute("containsNike", nike);
+        return "nike";
+    }
 
 
 }
