@@ -30,11 +30,9 @@
             <th>Price</th>
             <th>Quantity of stock</th>
         </tr>
-        <tr th:each="item : ${avrageStock}">
-            <td th:text="${item.getName()}"></td>
-            <td th:text="${item.getDescription()}"></td>
-            <td th:text="${item.getPrice()} + ' Ft'"></td>
-            <td th:text="${item.getQuantityOfStock()}"></td>
+        <div class="average">
+            <tr th:text="'Average stock : ' + ${avrageStock}">
+        </div>
         </tr>
     </table>
 </div>
