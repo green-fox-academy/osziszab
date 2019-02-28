@@ -14,7 +14,7 @@
         <a href="/only-available">ONLY AVAILABLE</a>
         <a href="/cheapest-first">CHEAPEST FIRST</a>
         <a href="contains-nike">CONTAINS NIKE</a>
-        <a href="/most-expensive">MOST EXPENSIVE AVAILABLE</a>
+        <a href="/average-stock">AVERAGE STOCK</a>
     </div>
     <div class="searchBox">
         <form method="get" action="http://index.hu">
@@ -30,9 +30,8 @@
             <th>Price</th>
             <th>Quantity of stock</th>
         </tr>
-        <div class="average">
-            <tr th:text="'Average stock : ' + ${avrageStock}">
-        </div>
+        <tr th:text="'Most expensive  : ' + ${mostExpensive}">
+
         </tr>
     </table>
 </div>

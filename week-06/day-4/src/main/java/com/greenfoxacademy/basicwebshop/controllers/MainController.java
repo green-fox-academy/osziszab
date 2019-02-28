@@ -20,7 +20,7 @@ public class MainController {
         itemList.add(new ShopItem("Running Shoes", "Nike running shoes for every day sport", 1000, 5));
         itemList.add(new ShopItem("Printer", "Some HP printer that will print pages", 3000, 2));
         itemList.add(new ShopItem("Coca Cola", "0,5l standard coke", 25, 0));
-        itemList.add(new ShopItem("Wokin","Chicken with fried rice and WOKIN sauce",119,100));
+        itemList.add(new ShopItem("Wokin", "Chicken with fried rice and WOKIN sauce", 119, 100));
         itemList.add(new ShopItem("T-shirt", "Bluew with a corgi ona a bike", 300, 1));
     }
 
@@ -67,10 +67,14 @@ public class MainController {
     }
 
     @RequestMapping(value = "most-expensive")
-    public String mostExpensive(Model model){
-        model.addAttribute("mostexpensive", itemList.stream()
-                .sorted(Comparator.comparing(ShopItem::getPrice)
-                ).collect(Collectors.toList()));
+    public String mostExpensive(Model model) {
+        ShopItem veryExpensive = itemList.stream()
+                .filter(shopItem -> shopItem.getQuantityOfStock() > 0)
+                .max(Comparator.comparing(ShopItem::getPrice))
+                .get();
+        String result = veryExpensive.getName();
+        model.addAttribute("mostExpensive", result);
+
         return "expensive";
     }
 }
