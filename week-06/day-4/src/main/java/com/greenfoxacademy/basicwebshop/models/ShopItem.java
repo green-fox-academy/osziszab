@@ -1,13 +1,13 @@
 package com.greenfoxacademy.basicwebshop.models;
 
-public class Items {
+public class ShopItem {
 
     private String name;
     private String description;
     private int price;
     private int quantityOfStock;
 
-    public Items(String name, String description, int price, int quantityOfStock) {
+    public ShopItem(String name, String description, int price, int quantityOfStock) {
         this.name = name;
         this.description = description;
         this.price = price;
