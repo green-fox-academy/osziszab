@@ -1,10 +1,15 @@
-.line{
-    width: 100%;
+.line {
+    width: 850px;
     height: 0px;
-    margin-bottom:  0px;
+    margin-bottom: 0px;
     border-bottom: 1px solid black;
     position: absolute;
 }
-head{
-    margin-top: 0px;
+
+.mainBox {
+    width: 850px;
+    height: 850px;
+    background-color: white;
+    padding: 300px;
+    padding-top: 30px;
 }
