@@ -17,10 +17,11 @@
         <a href="/most-expensive">MOST EXPENSIVE AVAILABLE</a>
     </div>
     <div class="searchBox">
-        <form method="get" action="http://index.hu">
-            <p>Search for:</p>
-            <input type="search" placeholder="...something like nike" class="searchBar">
-            <input type="submit" value="Search" class="searchButton">
+        <form method="post" action="/webshop/search">
+            <label class="searchLabel" for="searchbox">Search for: </label>
+            <input id="searchbox" type="search" name="searchField" placeholder="something like nike...">
+            <input type="submit" value="search">
+        </form>
         </form>
     </div>
     <table>

@@ -3,7 +3,9 @@ package com.greenfoxacademy.basicwebshop.controllers;
 import com.greenfoxacademy.basicwebshop.models.ShopItem;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 
 import java.util.ArrayList;
@@ -74,7 +76,15 @@ public class MainController {
                 .get();
         String result = veryExpensive.getName();
         model.addAttribute("mostExpensive", result);
-
         return "expensive";
+    }
+    @PostMapping(value = "/webshop/search")
+    public String search(Model model, @RequestParam("searchField") String keyword) {
+        List<ShopItem> returnSearchResultList = itemList.stream()
+                .filter(shopItem -> shopItem.getName().toLowerCase().contains(keyword.toLowerCase()) ||
+                        shopItem.getDescription().toLowerCase().contains(keyword.toLowerCase()))
+                .collect(Collectors.toList());
+        model.addAttribute("items", returnSearchResultList);
+        return "webshop";
     }
 }
