@@ -78,13 +78,14 @@ public class MainController {
         model.addAttribute("mostExpensive", result);
         return "expensive";
     }
-    @PostMapping(value = "/webshop/search")
+
+    @PostMapping(value = "/home/search")
     public String search(Model model, @RequestParam("searchField") String keyword) {
         List<ShopItem> returnSearchResultList = itemList.stream()
                 .filter(shopItem -> shopItem.getName().toLowerCase().contains(keyword.toLowerCase()) ||
                         shopItem.getDescription().toLowerCase().contains(keyword.toLowerCase()))
                 .collect(Collectors.toList());
         model.addAttribute("items", returnSearchResultList);
-        return "webshop";
+        return "searchResult";
     }
 }

@@ -30,7 +30,7 @@
             <th>Price</th>
             <th>Quantity of stock</th>
         </tr>
-        <tr th:each="item : ${allItem}">
+        <tr th:each="item : ${items}">
             <td th:text="${item.getName()}"></td>
             <td th:text="${item.getDescription()}"></td>
             <td th:text="${item.getPrice()} + ' Ft'"></td>
