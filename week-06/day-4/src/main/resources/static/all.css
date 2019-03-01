@@ -1,18 +1,37 @@
 body{
     font-family: "Microsoft PhagsPa";
 }
+h1{
+    color: deepskyblue;
+    line-height: 1px;
+    font-size: 35px;
+}
 .line {
-    width: 850px;
+    width: 710px;
     height: 0px;
-    margin-bottom: 0px;
-    border-bottom: 1px solid black;
+    border-bottom: 1.4pt solid deepskyblue;
     position: absolute;
 }
 
 .mainBox {
-    width: 850px;
-    height: 850px;
+    width: 730px;
+    height: 730px;
     background-color: white;
-    padding: 300px;
+    padding: 360px;
     padding-top: 30px;
+}
+
+.links{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 20px 0px;
+}
+
+a{
+    border: 1px solid orangered;
+    background-color: orangered;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    padding: 3px;
 }
