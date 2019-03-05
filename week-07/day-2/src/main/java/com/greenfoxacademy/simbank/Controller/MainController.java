@@ -11,15 +11,15 @@ import java.util.List;
 @Controller
 public class MainController {
 
-    private BankAccount animal1 = new BankAccount("Zebra", 2000, "donkey");
+    private BankAccount animal1 = new BankAccount("Zebra", 2000, "donkey",false);
     private List<BankAccount> bankAccountList = new ArrayList<>();
 
     public MainController(){
-        bankAccountList.add(new BankAccount("Mufasa",5000,"lion"));
-        bankAccountList.add(new BankAccount("Pumba",1000,"pig"));
-        bankAccountList.add(new BankAccount("Timon",500,"Surikata"));
-        bankAccountList.add(new BankAccount("Zordon",6000,"lion"));
-        bankAccountList.add(new BankAccount("Zazu",300,"bird"));
+        bankAccountList.add(new BankAccount("Mufasa",5000,"lion",true,false));
+        bankAccountList.add(new BankAccount("Pumba",1000,"pig",false,false));
+        bankAccountList.add(new BankAccount("Timon",500,"Surikata",false,false));
+        bankAccountList.add(new BankAccount("Zordon",6000,"lion",false,true));
+        bankAccountList.add(new BankAccount("Zazu",300,"bird",false,false));
     }
 
     @RequestMapping(value = "show")
