@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class MainController {
 
-    private BankAccount animal1 = new BankAccount("Zebra", 2000, "donkey",false);
+    private BankAccount animal1 = new BankAccount("Zebra", 2000, "donkey",false,false);
     private List<BankAccount> bankAccountList = new ArrayList<>();
 
     public MainController(){

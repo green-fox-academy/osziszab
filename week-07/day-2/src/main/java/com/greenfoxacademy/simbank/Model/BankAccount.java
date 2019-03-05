@@ -33,4 +33,8 @@ public class BankAccount {
         return king;
     }
 
+    public boolean isBadOrGood(){
+        return badOrGood;
+    }
+
 }

@@ -12,12 +12,17 @@
             <th>Name</th>
             <th>Balance</th>
             <th>AnimalType</th>
+            <th>Good or bad</th>
         </tr>
         <tr th:each="animal : ${getCharacters}"th:style="${animal.isKing()} ? 'color:red; : color:black;'">
             <td th:text="${animalStat.index}+1"></td>
             <td th:text="${animal.getName()}"></td>
             <td th:text="${animal.getBalance()}+' zebra'"></td>
             <td th:text="${animal.getAnimalType()}"></td>
+            <td th:switch="${animal.isBadOrGood()}">
+                <span th:case="true">Bad guy</span>
+                <span th:case="false">Good guy</span>
+            </td>
         </tr>
     </table>
 </body>
