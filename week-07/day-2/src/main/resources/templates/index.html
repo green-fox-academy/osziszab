@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="/index.css">
+    <title>Thymeleaf Exercise #</title>
+    <meta charset="utf-8" />
 </head>
 <body>
-<p>th:text"|$(showAccount)|"</p>
+    <p th:text="|Name: ${showAccount.getName()}  Balance: ${#numbers.formatDecimal(showAccount.getBalance(), 1, 'DEFAULT', 2, 'DEFAULT')} Zebra  AnimalType: ${showAccount.getAnimalType()}|"></p>
+
 </body>
 </html>

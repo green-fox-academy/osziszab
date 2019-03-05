@@ -3,7 +3,7 @@ package com.greenfoxacademy.simbank.Model;
 public class BankAccount {
 
     private String name;
-    private double balance;
+    private Double balance;
     private String animalType;
 
     public BankAccount(String name, double balance, String animalType) {
