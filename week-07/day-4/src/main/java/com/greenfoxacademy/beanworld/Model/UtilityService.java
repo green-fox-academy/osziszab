@@ -3,7 +3,6 @@ package com.greenfoxacademy.beanworld.Model;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 @Service
@@ -32,6 +31,19 @@ public class UtilityService {
             result = "<span style=\"color:green\">" + email + " is a valid email address ";
         } else {
             result = "<span style=\"color:red\">" + email + "is  not a valid email address";
+        }
+        return result;
+    }
+
+    public String caesar(String text, int number) {
+        if (number < 0) {
+            number = 26 + number;
+        }
+
+        String result = "";
+        for(int i = 0; i < text.length(); i++) {
+            int offset = Character.isUpperCase(text.charAt(i)) ? 'A' : 'a';
+            result += (char)(((int)text.charAt(i) + number - offset) % 26 + offset);
         }
         return result;
     }

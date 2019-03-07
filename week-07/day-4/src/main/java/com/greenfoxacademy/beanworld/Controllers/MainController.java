@@ -42,4 +42,10 @@ public class MainController {
     public String getemail() {
         return "index";
     }
+
+    @GetMapping (value = "/caesar")
+    public String caesar(Model model,@RequestParam("number") int number,@RequestParam("text") String text){
+        model.addAttribute("caesar",service.caesar(text,number));
+        return "caesar";
+    }
 }
