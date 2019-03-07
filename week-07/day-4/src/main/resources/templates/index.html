@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
 <h1> HELLO !</h1>
-<a href="/useful">RANDOM COLOR</a>
+<a href="/useful/">Home</a>
+<a href="/useful/colored">Random color </a>
+<div class="emailbox">
+    <form method="post" action="/useful/email">
+        <label class="emailLabel" for="emailbox">E-mail: </label>
+        <br>
+        <input id="emailbox" type="text" name="email" placeholder="your eamil addres">
+        <input class="button" type="submit" value="email">
+    </form>
+    <p th:utext="${validEmail}"></p>
+</div>
 </body>
 </html>

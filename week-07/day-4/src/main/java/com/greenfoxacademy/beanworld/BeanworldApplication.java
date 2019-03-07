@@ -14,7 +14,7 @@ public class BeanworldApplication implements CommandLineRunner {
     private MyColor color;
 
     @Autowired
-   public BeanworldApplication(@Qualifier("Black Color")MyColor color) {
+    public BeanworldApplication(@Qualifier("Black Color") MyColor color) {
         this.color = color;
     }
 
