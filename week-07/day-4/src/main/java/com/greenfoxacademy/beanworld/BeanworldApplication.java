@@ -1,6 +1,9 @@
 package com.greenfoxacademy.beanworld;
 
+import com.greenfoxacademy.beanworld.Model.MyColor;
+import com.greenfoxacademy.beanworld.Model.Printer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,11 +11,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BeanworldApplication implements CommandLineRunner {
 
-private Printer printer;
+    private MyColor color;
 
     @Autowired
-    BeanworldApplication(Printer printer) {
-        this.printer = printer;
+   public BeanworldApplication(@Qualifier("Black Color")MyColor color) {
+        this.color = color;
     }
 
     public static void main(String[] args) {
@@ -21,6 +24,6 @@ private Printer printer;
 
     @Override
     public void run(String... args) throws Exception {
-        printer.log("Hello");
+        this.color.printColor();
     }
 }

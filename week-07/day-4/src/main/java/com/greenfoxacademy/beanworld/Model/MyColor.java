@@ -1,4 +1,4 @@
-package com.greenfoxacademy.beanworld;
+package com.greenfoxacademy.beanworld.Model;
 
 public interface MyColor {
 
