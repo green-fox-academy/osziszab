@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by aze on 25/10/17.
  */
 @Controller
-@RequestMapping("/app")
 public class AppController {
 
     private UserService service;
@@ -27,18 +26,15 @@ public class AppController {
     @GetMapping("/")
     public String index(Model model) {
         model.addAttribute("user", new User());
-        model.addAttribute("yolo", service.getAll());
+        model.addAttribute("yolo", service.findAll());
         return "index";
     }
 
-    @GetMapping("/app")
+    @PostMapping("/app")
     public String create(@ModelAttribute User user) {
         service.save(user);
         return "redirect:/";
     }
 
-    @PostMapping("/app")
-    public String createUser() {
-        return "redirect:/";
-    }
+
 }

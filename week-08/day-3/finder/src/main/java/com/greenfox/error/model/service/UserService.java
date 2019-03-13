@@ -1,6 +1,8 @@
 package com.greenfox.error.model.service;
 
 import com.greenfox.error.model.finder.User;
+import com.greenfox.error.model.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -11,21 +13,20 @@ import java.util.ArrayList;
 @Service
 public class UserService {
 
-    private ArrayList<User> users;
+    private UserRepository userRepository;
 
-    public UserService() {
-        this.users = new ArrayList<>();
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
-    public ArrayList<User> getAll() {
-        return users;
+    public Iterable<User> findAll() {
+        return userRepository.findAll();
     }
 
     public void save(User user) {
-        users.add(user);
+        userRepository.save(user);
     }
 
-    public UserService service() {
-        return new UserService();
-    }
+
 }
