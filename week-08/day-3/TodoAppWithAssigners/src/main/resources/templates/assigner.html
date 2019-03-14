@@ -24,6 +24,7 @@
         <td th:text="${assigne.getEmail()}"></td>
         <td><form th:action="@{|${assigne.id}/delete|}" th:method="delete">
             <input type="submit" value="Delete">
+        <td><a th:href="@{${assigne.id}+'/updateAssigner'}">EDIT</a></td>
     </tr>
 </table>
 
