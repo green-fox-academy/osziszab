@@ -79,10 +79,10 @@ public class TodoController {
         List<Todo> searchResult = new ArrayList<>();
         todoRepository.findAll().forEach(searchResult::add);
         searchResult = searchResult.stream()
-                .filter(s->s.getTitle().toLowerCase().contains(serachedText.toLowerCase()))
+                .filter(s -> s.getTitle().toLowerCase().contains(serachedText.toLowerCase()))
                 .sorted(Comparator.comparing(Todo::getId))
                 .collect(Collectors.toList());
-        model.addAttribute("searchFiled",searchResult);
+        model.addAttribute("searchFiled", searchResult);
         return "searchResult";
     }
 
