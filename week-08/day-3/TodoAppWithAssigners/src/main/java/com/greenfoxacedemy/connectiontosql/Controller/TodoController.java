@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -63,18 +64,26 @@ public class TodoController {
     }
 
     @PostMapping(value = "/{id}/update")
-    public String updateTodo(@PathVariable Long id, @ModelAttribute Todo todotoedit) {
-        todoRepository.save(todotoedit);
+    public String updateTodo(@PathVariable Long id, @ModelAttribute Todo todo) {
+        Todo todoEdit = todoRepository.findById(id).orElseThrow(NullPointerException::new);
+        todoEdit.setTitle(todo.getTitle());
+        todoEdit.setDone(todo.isDone());
+        todoEdit.setUrgent(todo.isUrgent());
+        todoRepository.save(todoEdit);
+
         return "redirect:/todo/";
     }
 
     @PostMapping(value = "/search")
-    public String searchBy(Model model, @RequestParam("searchField") String serachedtext) {
+    public String searchBy(Model model, @RequestParam("searchField") String serachedText) {
         List<Todo> searchResult = new ArrayList<>();
         todoRepository.findAll().forEach(searchResult::add);
-        model.addAttribute("searchFiled",searchResult.stream()
-                .filter(s->s.getTitle().contains(serachedtext.toLowerCase())));
-        return "redirect:/todo/";
+        searchResult = searchResult.stream()
+                .filter(s->s.getTitle().toLowerCase().contains(serachedText.toLowerCase()))
+                .sorted(Comparator.comparing(Todo::getId))
+                .collect(Collectors.toList());
+        model.addAttribute("searchFiled",searchResult);
+        return "searchResult";
     }
 
 }
