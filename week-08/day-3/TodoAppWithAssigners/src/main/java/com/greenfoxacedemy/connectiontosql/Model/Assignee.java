@@ -14,9 +14,12 @@ public class Assignee {
     private String name;
     private String email;
 
-    public Assignee(String name, String email) {
+    public Assignee(String name) {
         this.name = name;
         this.email = email;
+    }
+    public Assignee(){
+
     }
 
     public String getName() {
