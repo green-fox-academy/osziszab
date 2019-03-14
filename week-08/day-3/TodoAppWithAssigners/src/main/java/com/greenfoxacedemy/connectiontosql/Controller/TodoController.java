@@ -55,15 +55,31 @@ public class TodoController {
         todoRepository.deleteById(id);
         return "redirect:/todo/";
     }
+
     @GetMapping(value = "/{id}/update")
-    public String showUpdateView(@PathVariable("id") Long id, Model model){
+    public String showUpdateView(@PathVariable("id") Long id, Model model) {
         model.addAttribute("todo", todoRepository.findById(id).orElseThrow(NullPointerException::new));
         return "update";
     }
 
     @PostMapping(value = "/{id}/update")
-    public String updateTodo(@PathVariable Long id,@ModelAttribute Todo todotoedit){
+    public String updateTodo(@PathVariable Long id, @ModelAttribute Todo todotoedit) {
         todoRepository.save(todotoedit);
+        return "redirect:/todo/";
+    }
+
+    @PostMapping(value = "/search")
+    public String searchBy(Model model, @RequestParam("searchField") String keyword) {
+        List searchResults = null;
+        try {
+            searchResults = todoRepository.findAll(keyword);
+        } catch (Exception ex) {
+            // here you should handle unexpected errors
+            // ...
+            // throw ex;
+        }
+        model.addAttribute("searchResults", searchResults);
+        return "search";
         return "redirect:/todo/";
     }
 
