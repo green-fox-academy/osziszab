@@ -9,10 +9,12 @@
 <h3>Add Assigners</h3>
 <form  th:action="@{/addAssigner}" th:object="${assigners}" method="POST">
     <input type="text" th:field="*{name}" required>
+    <input type="email" th:field="*{email}" required>
     <input type="submit" value="Submit"/>
 </form>
 <table>
     <tr>
+        <th>ID</th>
         <th>Name</th>
         <th>Email</th>
     </tr>
@@ -20,6 +22,8 @@
         <td th:text="${assigne.getId()}"></td>
         <td th:text="${assigne.getName()}"></td>
         <td th:text="${assigne.getEmail()}"></td>
+        <td><form th:action="@{|${assigne.id}/delete|}" th:method="delete">
+            <input type="submit" value="Delete">
     </tr>
 </table>
 
