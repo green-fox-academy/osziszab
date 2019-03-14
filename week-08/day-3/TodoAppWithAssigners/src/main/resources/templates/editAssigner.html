@@ -9,7 +9,7 @@
 
 <h1>Edit here:</h1>
 
-<form action="#" th:action="@{|${assignee.getId()}/updateAssigner|}" th:object="${assignee}" th:method="post">
+<form action="#" th:action="@{'/' +${assignee.getId()}+'/updateAssigner'}" th:object="${assignee}" th:method="post">
     <input type="text" th:field="*{name}" required th:placeholder="${assignee.getName()}">
     <input type="text" th:field="*{email}" required th:placeholder="${assignee.getEmail()}">
     <input type="submit" th:value="Submit">
