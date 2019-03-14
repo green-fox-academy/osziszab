@@ -69,17 +69,11 @@ public class TodoController {
     }
 
     @PostMapping(value = "/search")
-    public String searchBy(Model model, @RequestParam("searchField") String keyword) {
-        List searchResults = null;
-        try {
-            searchResults = todoRepository.findAll(keyword);
-        } catch (Exception ex) {
-            // here you should handle unexpected errors
-            // ...
-            // throw ex;
-        }
-        model.addAttribute("searchResults", searchResults);
-        return "search";
+    public String searchBy(Model model, @RequestParam("searchField") String serachedtext) {
+        List<Todo> searchResult = new ArrayList<>();
+        todoRepository.findAll().forEach(searchResult::add);
+        model.addAttribute("searchFiled",searchResult.stream()
+                .filter(s->s.getTitle().contains(serachedtext.toLowerCase())));
         return "redirect:/todo/";
     }
 
