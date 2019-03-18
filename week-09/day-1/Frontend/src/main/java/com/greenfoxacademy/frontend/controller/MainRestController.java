@@ -1,9 +1,6 @@
 package com.greenfoxacademy.frontend.controller;
 
-import com.greenfoxacademy.frontend.model.ErrorMassage;
-import com.greenfoxacademy.frontend.model.Greeting;
-import com.greenfoxacademy.frontend.model.UserAppends;
-import com.greenfoxacademy.frontend.model.UserInput;
+import com.greenfoxacademy.frontend.model.*;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -45,7 +42,11 @@ public class MainRestController {
     }
 
     @PostMapping(value = "/dountil/{action}")
-    public Object doUntil(){
-        
+    public Object doUntil(@PathVariable("action") String action, @RequestBody Until until){
+        if(until.getUntil()==null){
+            return new ErrorMassage( "Please provide a number!");
+        }else {
+            return new UserDoUntil(action,until);
+        }
     }
 }
