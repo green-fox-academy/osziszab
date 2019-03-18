@@ -4,10 +4,7 @@ import com.greenfoxacademy.frontend.model.ErrorMassage;
 import com.greenfoxacademy.frontend.model.Greeting;
 import com.greenfoxacademy.frontend.model.UserAppends;
 import com.greenfoxacademy.frontend.model.UserInput;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MainRestController {
@@ -45,5 +42,10 @@ public class MainRestController {
     @GetMapping(value = "/appenda/{appendable}")
     public Object appendA(@PathVariable String appendable){
         return new UserAppends(appendable);
+    }
+
+    @PostMapping(value = "/dountil/{action}")
+    public Object doUntil(){
+        
     }
 }
