@@ -1,5 +1,6 @@
 package com.greenfoxacademy.frontend.controller;
 
+import com.greenfoxacademy.frontend.model.ErrorMassage;
 import com.greenfoxacademy.frontend.model.UserInput;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -10,9 +11,14 @@ public class MainRestController {
 
 
     @GetMapping(value = "/doubling")
-    public UserInput doublingNumber(@RequestParam ("input") int number){
-        UserInput userInput = new UserInput(number);
-        userInput.doublingInputNumber();
-        return userInput;
+    public Object doublingNumber(@RequestParam (name = "input", required = false) Integer number){
+        ErrorMassage errorMassage = new ErrorMassage();
+        if(number != null){
+            UserInput userInput = new UserInput(number);
+            userInput.doublingInputNumber();
+            return userInput;
+        }else{
+            return errorMassage;
+        }
     }
 }

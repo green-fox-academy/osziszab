@@ -4,8 +4,8 @@ public class ErrorMassage {
 
     private String error;
 
-    public ErrorMassage(String error) {
-        this.error = error;
+    public ErrorMassage() {
+        this.error = "Please provide an input!";
     }
 
     public String getError() {
