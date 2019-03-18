@@ -13,29 +13,30 @@ public class MainRestController {
 
     @GetMapping(value = "/doubling")
     public Object doublingNumber(@RequestParam(name = "input", required = false) Integer number) {
-        ErrorMassage errorMassage = new ErrorMassage();
+        ErrorMassage errorMassage = new ErrorMassage("Please provide an input!");
         if (number != null) {
             UserInput userInput = new UserInput(number);
             userInput.doublingInputNumber();
             return userInput;
         } else {
-            errorMassage.getNumberMissingError();
             return errorMassage;
         }
     }
 
     @GetMapping(value = "/greeter")
     public Object greetUser(@RequestParam(name = "name", required = false) String name, @RequestParam(name = "title", required = false) String title) {
-        ErrorMassage errorMassage = new ErrorMassage();
         if (name != null && title != null) {
             Greeting greeting1 = new Greeting(name, title);
             return greeting1;
-        } else {
-            errorMassage.errorMissingTitleAndName();
+        } else if(name==null && title==null){
+            ErrorMassage errorMassage = new ErrorMassage("Please provide a name and a title!");
             return errorMassage;
-        }
-        if (name == null && title != null) {
-
+        }else if (name == null && title != null) {
+            ErrorMassage errorMassage1 = new ErrorMassage("Please provide a name!");
+            return errorMassage1;
+        }else{
+            ErrorMassage errorMassage2 = new ErrorMassage("Please provide a title!");
+            return errorMassage2;
         }
     }
 }
