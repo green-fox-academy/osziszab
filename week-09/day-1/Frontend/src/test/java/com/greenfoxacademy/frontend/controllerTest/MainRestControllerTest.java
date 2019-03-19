@@ -74,5 +74,15 @@ public class MainRestControllerTest {
     }
 
     @Test
-    public void 
+    public void appendATest() throws Exception{
+        this.mockMvc.perform(get("/appenda/kuty"))
+                .andExpect(jsonPath("$.appended",is("kutya")));
+    }
+
+    @Test
+    public void appendAErrorTest() throws Exception{
+        this.mockMvc.perform(get("/appenda"))
+                .andExpect((status().isNotFound()));
+    }
 }
+
