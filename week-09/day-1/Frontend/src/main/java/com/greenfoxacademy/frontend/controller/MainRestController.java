@@ -49,4 +49,13 @@ public class MainRestController {
             return new UserDoUntil(action,until);
         }
     }
+
+    @PostMapping(value = "/arrayHandler/{what}")
+    public Object arrayhandle(@PathVariable("what") String what, @RequestBody UserArray numbers){
+        if(what == null){
+            return new ErrorMassage("Please provide what to do with the numbers!");
+        }else{
+            return numbers;
+        }
+    }
 }
