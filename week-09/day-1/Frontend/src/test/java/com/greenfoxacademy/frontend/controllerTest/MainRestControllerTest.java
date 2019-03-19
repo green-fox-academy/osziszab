@@ -50,54 +50,67 @@ public class MainRestControllerTest {
     }
 
     @Test
-    public void greeterTest() throws Exception{
+    public void greeterTest() throws Exception {
         this.mockMvc.perform(get("/greeter?name=Szabi&title=student"))
                 .andExpect(jsonPath("$.welcome_message", is("Oh, hi there Szabi, my dear student!")));
     }
 
     @Test
-    public void missingNameAndTitleTest() throws Exception{
+    public void missingNameAndTitleTest() throws Exception {
         this.mockMvc.perform(get("/greeter"))
-                .andExpect(jsonPath("$.error",is("Please provide a name and a title!")));
+                .andExpect(jsonPath("$.error", is("Please provide a name and a title!")));
     }
 
     @Test
     public void missingNameTest() throws Exception {
         this.mockMvc.perform(get("/greeter?title=student"))
-                .andExpect(jsonPath("$.error",is("Please provide a name!")));
+                .andExpect(jsonPath("$.error", is("Please provide a name!")));
     }
 
     @Test
-    public void missingTitleTest() throws Exception{
+    public void missingTitleTest() throws Exception {
         this.mockMvc.perform(get("/greeter?name=Szabi"))
-                .andExpect(jsonPath("$.error",is("Please provide a title!")));
+                .andExpect(jsonPath("$.error", is("Please provide a title!")));
     }
 
     @Test
-    public void appendATest() throws Exception{
+    public void appendATest() throws Exception {
         this.mockMvc.perform(get("/appenda/kuty"))
-                .andExpect(jsonPath("$.appended",is("kutya")));
+                .andExpect(jsonPath("$.appended", is("kutya")));
     }
 
     @Test
-    public void appendAErrorTest() throws Exception{
+    public void appendAErrorTest() throws Exception {
         this.mockMvc.perform(get("/appenda"))
                 .andExpect((status().isNotFound()));
     }
 
     @Test
-    public void doUntilSumTest()throws Exception{
+    public void doUntilSumTest() throws Exception {
         this.mockMvc.perform(post("/dountil/sum")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"until\": 5}"))
-                .andExpect(jsonPath("$.result",is(15)));
+                .andExpect(jsonPath("$.result", is(15)));
     }
+
     @Test
-    public void doUntilFactorTest() throws Exception{
+    public void doUntilFactorTest() throws Exception {
         this.mockMvc.perform(post("/dountil/factor")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\"until\": 5}"))
-                .andExpect(jsonPath("$.result",is(120)));
+                .andExpect(jsonPath("$.result", is(120)));
+    }
+
+    @Test
+    public void doUntilSumNumberMissingTest()throws Exception{
+        mockMvc.perform(post("/dountil/sum"))
+                .andExpect(jsonPath("$.error", is("Please provide a number!")));
+    }
+
+    @Test
+    public void doUntilFactorNumberMissingTest()throws Exception{
+        mockMvc.perform(post("/dountil/factor"))
+                .andExpect(jsonPath("$.error", is("Please provide a number!")));
     }
 }
 

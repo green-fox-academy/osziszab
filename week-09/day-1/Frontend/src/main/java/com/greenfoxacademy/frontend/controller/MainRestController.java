@@ -42,8 +42,8 @@ public class MainRestController {
     }
 
     @PostMapping(value = "/dountil/{action}")
-    public Object doUntil(@PathVariable("action") String action, @RequestBody Until until){
-        if(until.getUntil()==null){
+    public Object doUntil(@PathVariable("action") String action, @RequestBody(required = false) Until until){
+        if(until==null){
             return new ErrorMassage( "Please provide a number!");
         }else {
             return new UserDoUntil(action,until);
