@@ -84,5 +84,13 @@ public class MainRestControllerTest {
         this.mockMvc.perform(get("/appenda"))
                 .andExpect((status().isNotFound()));
     }
+
+    @Test
+    public void doUntilSumTest()throws Exception{
+        this.mockMvc.perform(post("/dountil/sum")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"until\": 5}"))
+                .andExpect(jsonPath("$.result",is(15)));
+    }
 }
 
