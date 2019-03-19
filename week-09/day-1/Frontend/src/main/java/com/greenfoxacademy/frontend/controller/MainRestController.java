@@ -55,7 +55,7 @@ public class MainRestController {
         if(what == null){
             return new ErrorMassage("Please provide what to do with the numbers!");
         }else{
-            return numbers;
+            return new ArrayHandler(what,numbers);
         }
     }
 }
