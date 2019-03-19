@@ -6,24 +6,27 @@ public class ArrayHandler {
 
     private Object result;
 
-    public ArrayHandler(String what, UserArray userArray) {
-        if (what.equals("sum")) {
-            this.result = Arrays.stream(userArray.getArray())
-                    .mapToInt(Integer::intValue).sum();
+    public ArrayHandler( UserArray userArray) {
+        if (userArray.getWhat().equals("sum")) {
+            this.result = Arrays.stream(userArray.getNumbers())
+                    .sum();
 
-        } else if (what.equals("multiply")) {
+        } else if (userArray.getWhat().equals("multiply")) {
             int temp = 1;
-            for (int i : userArray.getArray()) {
-                temp*=i;
+            for (int i : userArray.getNumbers()) {
+                temp *= i;
             }
-            result=temp;
+            result = temp;
 
-        } else if (what.equals("double")) {
-            this.result = Arrays.stream(userArray.getArray())
+        } else if (userArray.getWhat().equals("double")) {
+            this.result = Arrays.stream(userArray.getNumbers())
                     .map(s -> s * 2)
                     .toArray();
         }
 
     }
 
+    public Object getResult() {
+        return result;
+    }
 }

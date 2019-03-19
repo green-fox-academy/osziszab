@@ -50,12 +50,13 @@ public class MainRestController {
         }
     }
 
-    @PostMapping(value = "/arrayHandler/{what}")
-    public Object arrayhandle(@PathVariable("what") String what, @RequestBody UserArray numbers){
-        if(what == null){
+    @PostMapping(value = "/arrays")
+    public Object arrayHandle(@RequestBody(required = false) UserArray numbers){
+        if(numbers.getNumbers() == null){
             return new ErrorMassage("Please provide what to do with the numbers!");
         }else{
-            return new ArrayHandler(what,numbers);
+            ArrayHandler arrayHandler = new ArrayHandler(numbers);
+            return arrayHandler;
         }
     }
 }
