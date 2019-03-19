@@ -92,5 +92,12 @@ public class MainRestControllerTest {
                 .content("{\"until\": 5}"))
                 .andExpect(jsonPath("$.result",is(15)));
     }
+    @Test
+    public void doUntilFactorTest() throws Exception{
+        this.mockMvc.perform(post("/dountil/factor")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"until\": 5}"))
+                .andExpect(jsonPath("$.result",is(120)));
+    }
 }
 
