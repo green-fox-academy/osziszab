@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+<h1>Welcome to Fox Club !</h1>
+<a th:href="@{/createProfile}">Sign up</a>
+<br>
+<h1>OR</h1>
+<h1>Login</h1>
+<form  th:action="@{/main}" th:object="${loginAccount}">
+    <label for="url">Username</label>
+    <br>
+    <input id="url"type="text" th:field="*{name}" required>
+    <br>
+    <label for="alais">Password</label>
+    <br>
+    <input id="alais" type="password" th:field="*{password}" required>
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+
+</body>
+</html>

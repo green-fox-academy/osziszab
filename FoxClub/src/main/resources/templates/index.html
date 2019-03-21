@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your fox</title>
+</head>
+<body>
+    <h1>Your fox</h1>
+    <img src="greenfox.png"height="250" width="250" th:src="@{greenfox.png}">
+    <p th:text="|This is ${thisFox.getName()}  Currently living on ${thisFox.getFood()} and ${thisFox.getDrink()} He knows tricks |"></p>
+<h1>Known tricks</h1>
+<ul>
+    <li th:text="${thisFox.tricks}" ></li>
+</ul>
+</body>
+</html>

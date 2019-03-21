@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Your account</title>
+</head>
+<body>
+<h1>Choose your fox</h1>
+<a th:href="@{'/addnewFox/'+${userId}}">Create a new Fox</a>
+<br>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Tricks</th>
+        <th>Food</th>
+        <th>Drink</th>
+    </tr>
+    <tr th:each="fox:${foxes}">
+    <td th:text="${fox.getId()}"></td>
+    <td><a th:href="@{'/' + ${fox.getId()}}" th:text="${fox.getName()}"></a></td>
+    <td th:text="${fox.getTricks()}"></td>
+    <td th:text="${fox.getFood()}"></td>
+    <td th:text="${fox.getDrink()}"></td>
+    <tr/>
+</table>
+</body>
+</html>
