@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>Main page</title>
+</head>
+<body>
+<p th:text="${message}"></p>
+<form th:action="@{/register}" th:method="post" th:object="${newRegisters}">
+    <label for="email">Email</label>
+    <br>
+    <input id="email" type="email" th:field="*{email}" required>
+    <br>
+    <label for="password">Password</label>
+    <br>
+    <input id="password" type="password" th:field="*{password}"  required>
+    <br>
+    <label for="cupon">Coupon code</label>
+    <br>
+    <input id="cupon" type="text" th:field="*{couponcode}" >
+    <br>
+    <input type="submit" value="Submit"/>
+</form>
+<p>Latest registered users:</p>
+
+<ul th:each="names:${latestUsers}">
+    <li th:text="${names}"></li>
+</ul>
+</body>
+</html>
