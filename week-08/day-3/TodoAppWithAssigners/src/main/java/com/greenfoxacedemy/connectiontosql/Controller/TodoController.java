@@ -1,6 +1,8 @@
 package com.greenfoxacedemy.connectiontosql.Controller;
 
+import com.greenfoxacedemy.connectiontosql.Model.Assignee;
 import com.greenfoxacedemy.connectiontosql.Model.Todo;
+import com.greenfoxacedemy.connectiontosql.repository.AssigneeRepository;
 import com.greenfoxacedemy.connectiontosql.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +19,7 @@ import java.util.stream.Collectors;
 public class TodoController {
 
     TodoRepository todoRepository;
+    AssigneeRepository assigneeRepository;
 
     @Autowired
     TodoController(TodoRepository todoRepository) {
@@ -24,7 +27,7 @@ public class TodoController {
     }
 
     @GetMapping(value = {"/", "/list"})
-    public String list(Model model, @RequestParam(value = "isActive", required = false) String text) {
+    public String list(Mdoel model, @RequestParam(value = "isActive", required = false) String text) {
         List<Todo> list = new ArrayList<>();
         todoRepository.findAll().forEach(list::add);
 
@@ -60,6 +63,10 @@ public class TodoController {
     @GetMapping(value = "/{id}/update")
     public String showUpdateView(@PathVariable("id") Long id, Model model) {
         model.addAttribute("todo", todoRepository.findById(id).orElseThrow(NullPointerException::new));
+        List<Assignee> assignees = new ArrayList<>();
+
+        assigneeRepository.findAll().forEach(assignees::add);
+        model.addAttribute("assigneeList",assignees);
         return "update";
     }
 

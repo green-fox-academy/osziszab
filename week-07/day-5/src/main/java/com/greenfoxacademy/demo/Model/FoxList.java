@@ -14,9 +14,9 @@ public class FoxList {
     public FoxList(){
         foxes = new ArrayList<>();
         Fox fox = new Fox("Weed", Arrays.asList("eat", "play", "fight","smoke"),"salami", "cola");
-        Fox fox1 = new Fox("Bela", Arrays.asList("swim", "run", "learn"),"meat", "water");
-        Fox fox2 = new Fox("Karoly", Arrays.asList("read", "flex"),"meat", "water");
-        Fox fox3 = new Fox("Zsigmond", Arrays.asList("jump", "code"),"meat", "water");
+        Fox fox1 = new Fox("Shoe", Arrays.asList("swim", "run", "learn"),"hamburger", "beer");
+        Fox fox2 = new Fox("Mario", Arrays.asList("read", "flex"),"cheese", "fanta");
+        Fox fox3 = new Fox("Scar", Arrays.asList("jump", "code"),"meat", "water");
 
         foxes.add(fox);
         foxes.add(fox1);

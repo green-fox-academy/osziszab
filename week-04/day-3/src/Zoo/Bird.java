@@ -4,8 +4,10 @@ public class Bird extends Animal {
 
     int wingSize;
 
-    public Bird (String name){
+    public Bird (String name,){
         super(name);
+
+
     }
 
     @Override

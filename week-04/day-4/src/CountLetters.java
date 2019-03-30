@@ -14,6 +14,4 @@ public class CountLetters {
         }
         return dictionary;
     }
-
-
 }

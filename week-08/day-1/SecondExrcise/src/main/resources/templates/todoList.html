@@ -19,7 +19,9 @@
         <td th:text="${todo.getTitle()}"></td>
         <td th:text="${todo.isDone()}"></td>
         <td th:text="${todo.isUrgent()}"></td>
-        <td><a th:href="@{'/todo/'+${todo.id}+'/delete'}" th:method="get">DELETE</a></td>
+        <td><form th:action="@{'/todo/'+${todo.id}+'/delete'}" th:method="delete">
+            <input type="submit" value="Delete">
+        </form></td>
         <td><a th:href="@{'/todo/'+${todo.id}+'/update'}">EDIT</a></td>
     <tr/>
 </table>

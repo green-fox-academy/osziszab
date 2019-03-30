@@ -1,37 +1,48 @@
-body{
+body {
     font-family: "Microsoft PhagsPa";
 }
-h1{
+
+h1 {
     color: deepskyblue;
     line-height: 1px;
     font-size: 35px;
 }
+
 .line {
-    width: 710px;
+    width: 780px;
     height: 0px;
     border-bottom: 1.4pt solid deepskyblue;
     position: absolute;
 }
 
 .mainBox {
-    width: 730px;
-    height: 730px;
+    width: 800px;
+    height: 800px;
     background-color: white;
     padding: 360px;
     padding-top: 30px;
 }
 
-.links{
+.links {
     display: flex;
     justify-content: space-between;
     padding: 20px 20px 20px 0px;
 }
 
-a{
+a {
     border: 1px solid orangered;
     background-color: orangered;
     border-radius: 5px;
     color: white;
     text-decoration: none;
     padding: 3px;
+}
+
+.searchLabel {
+    font-size: 21px;
+    color: orangered;
+}
+
+#id {
+border: 2px solid orangered;
 }

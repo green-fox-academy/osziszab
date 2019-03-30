@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        
+
         List<Fox> foxes = new ArrayList<>();
         foxes.add(new Fox("Weed", "green", 3));
         foxes.add(new Fox("Genius", "yellow", 2));
@@ -16,7 +16,8 @@ public class Main {
         foxes.add(new Fox("Hairy", "rouge", 15));
 
         System.out.println(foxes.stream()
-                .map(s -> s.getColor())
+                .filter(s -> s.getColor()=="green")
+                .map(s->s.getName())
                 .collect(Collectors.toList()));
 
         System.out.println(foxes.stream()

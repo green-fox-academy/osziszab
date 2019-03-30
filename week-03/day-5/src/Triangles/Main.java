@@ -1,29 +1,22 @@
+package Triangles;
 import javax.swing.*;
 import java.awt.*;
 import java.util.HashMap;
 
+
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class Triangles {
+public class Main{
     public static void mainDraw(Graphics graphics) {
 
-        int triangleSize=15;
-        int line =0;
-
-        for( int i = 0;i < 21; i++){
-            line=i*triangleSize;
-
-            graphics.drawLine(0,HEIGHT-triangleSize,HEIGHT,HEIGHT-triangleSize);
-            graphics.drawLine(0,HEIGHT-triangleSize, HEIGHT/2,5);
-            graphics.drawLine(HEIGHT/2,5,HEIGHT,HEIGHT-triangleSize);
-
-
-        }
+        Triangle base = new Triangle();
+        base.drawBasicTriangle(graphics);
+        base.drawInnerTriangle(graphics);
     }
 
     // Don't touch the code below
-    static int WIDTH = 320;
-    static int HEIGHT = 320;
+    static int WIDTH = 610;
+    static int HEIGHT = 610;
 
     public static void main(String[] args) {
         JFrame jFrame = new JFrame("Drawing");

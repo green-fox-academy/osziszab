@@ -80,7 +80,6 @@ public class GeneralTest {
         expectedMap.put('a', 2);
         expectedMap.put('c', 1);
         expectedMap.put('t', 1);
-
         assertEquals(expectedMap, letters.countLetters("worldofwarcraft"));
 
     }

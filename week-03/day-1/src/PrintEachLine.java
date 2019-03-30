@@ -11,7 +11,7 @@ public class PrintEachLine {
         // then it should print the following error message: "Unable to read file: my-file.txt"
 
         try {
-            Path filePath = Paths.get("day-1/my-life.txt");
+            Path filePath = Paths.get("my-file.txt");
             List<String> lines = Files.readAllLines(filePath);
         }catch (Exception ex){
             System.err.println("Unable to read file: my-file.txt");

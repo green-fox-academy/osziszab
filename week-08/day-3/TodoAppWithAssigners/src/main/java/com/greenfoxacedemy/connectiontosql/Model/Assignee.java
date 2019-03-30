@@ -1,9 +1,8 @@
 package com.greenfoxacedemy.connectiontosql.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Assignee {
@@ -14,10 +13,15 @@ public class Assignee {
     private String name;
     private String email;
 
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "assignee")
+    private List<Todo> todos;
+
     public Assignee(String name) {
         this.name = name;
         this.email = email;
+        this.todos= new ArrayList<>();
     }
+
     public Assignee(){
 
     }

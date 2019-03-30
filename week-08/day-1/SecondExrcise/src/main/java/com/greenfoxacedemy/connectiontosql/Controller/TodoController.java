@@ -50,7 +50,7 @@ public class TodoController {
         return "redirect:/todo/";
     }
 
-    @GetMapping(value = "/{id}/delete")
+    @DeleteMapping(value = "/{id}/delete")
     public String deleteTodo(@PathVariable("id") long id) {
         todoRepository.deleteById(id);
         return "redirect:/todo/";
@@ -63,7 +63,7 @@ public class TodoController {
 
     @PostMapping(value = "/{id}/update")
     public String updateTodo(@PathVariable Long id,Todo todo){
-        Todo todoToUpdate = todoRepository.findById(id).get();
+        Todo todoToUpdate = todoRepository.findById(id).orElseThrow(NullPointerException::new);
         todoToUpdate.setTitle(todo.getTitle());
         todoToUpdate.setDone(todo.isDone());
         todoToUpdate.setUrgent(todo.isUrgent());
