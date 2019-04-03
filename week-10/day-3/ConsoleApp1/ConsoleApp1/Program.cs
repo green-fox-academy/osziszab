@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApp1
@@ -10,10 +11,30 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+            PlayMainTheme();
+        }
+
+        
+       public static void PlayMainTheme()
+        {
+            Console.Beep(300, 500);
+            Thread.Sleep(50);
+            Console.Beep(300, 500);
+            Thread.Sleep(50);
+            Console.Beep(300, 500);
+            Thread.Sleep(50);
+            Console.Beep(250, 500);
+            Thread.Sleep(50);
+            Console.Beep(350, 250);
+            Console.Beep(300, 500);
+            Thread.Sleep(50);
+            Console.Beep(250, 500);
+            Thread.Sleep(50);
+            Console.Beep(350, 250);
+            Console.Beep(300, 500);
+            Thread.Sleep(50);
         }
     }
 }
+
