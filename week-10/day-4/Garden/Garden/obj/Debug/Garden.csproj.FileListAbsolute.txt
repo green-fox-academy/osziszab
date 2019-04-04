@@ -1,0 +1,7 @@
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\obj\Debug\Garden.csprojAssemblyReference.cache
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\obj\Debug\Garden.csproj.CoreCompileInputs.cache
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\bin\Debug\Garden.exe.config
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\bin\Debug\Garden.exe
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\bin\Debug\Garden.pdb
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\obj\Debug\Garden.exe
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Garden\Garden\obj\Debug\Garden.pdb
