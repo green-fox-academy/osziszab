@@ -1,0 +1,7 @@
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\obj\Debug\Pirates.csprojAssemblyReference.cache
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\obj\Debug\Pirates.csproj.CoreCompileInputs.cache
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\bin\Debug\Pirates.exe.config
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\bin\Debug\Pirates.exe
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\bin\Debug\Pirates.pdb
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\obj\Debug\Pirates.exe
+C:\Users\Szabi\greenfox\osziszab\week-10\day-4\Pirates\Pirates\obj\Debug\Pirates.pdb
