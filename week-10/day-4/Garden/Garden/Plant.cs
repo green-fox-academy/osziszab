@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Garden
 {
-    abstract class Plant : Garden{
+    abstract class Plant{
 
         protected String color;
         protected double waterNeed;
