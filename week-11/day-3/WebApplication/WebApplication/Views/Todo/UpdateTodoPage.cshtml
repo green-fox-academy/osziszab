@@ -1,0 +1,24 @@
+﻿@model WebApplication.Models.Todo
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Update</title>
+</head>
+<body>
+    <h1>Edit todo </h1>
+    <form asp-controller="Todo" asp-action="UpdateTodo" asp-route-id="@Model.Id" method="post">
+        <label for="desc">Todo Description</label>
+        <input id="desc" type="text" asp-for="Title" required>
+
+        <label for="donebox">Done</label>
+        <input type="checkbox" asp-for="IsDone">
+
+        <label for="urgentbox">Urgent</label>
+        <input type="checkbox" asp-for="IsUrgent">
+
+        <input type="submit" value="Submit" class="submit" />
+        <a href="/todo/list">Cancel</a>
+    </form>
+</body>
+</html>
