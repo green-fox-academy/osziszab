@@ -1,0 +1,40 @@
+﻿@model List<WebApplication.Models.Assignee>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>List </title>
+</head>
+<body>
+    <h1>Assignees:</h1>
+    <a href="/todo/addAssignee">Add new assignee</a>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+              
+                <td>
+                    <form asp-controller="Assignee" asp-action="DeleteAssignee" asp-route-id="@item.Id" method="post">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+                <td>
+                    <form asp-controller="Assignee" asp-action="UpdateAssignee" asp-route-id="@item.Id" method="get">
+                        <input type="submit" value="Edit">
+                    </form>
+                </td>
+            </tr>
+        }
+    </table>
+
+</body>
+</html>

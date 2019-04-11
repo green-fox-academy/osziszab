@@ -1,0 +1,45 @@
+﻿@model List<WebApplication.Models.Todo>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>List </title>
+</head>
+<body>
+    <h1>Todos for today:</h1>
+    <a href="/todo/add">Add new todo</a>
+    <a href="/todo/assigneeLsit">Assignee list</a>
+    <form asp-controller="Todo" asp-action="SearchBar" method="post">
+        <input type="text" name="szar"/>
+        <input type="submit" value="Search">
+    </form>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Action</th>
+                <th>Done</th>
+                <th>Urgent</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Title</td>
+                    <td>@item.IsDone</td>
+                    <td>@item.IsUrgent</td>
+                    <td>
+                        <form asp-controller="Todo" asp-action="DeleteTodo" asp-route-id="@item.Id" method="post">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                    <td>
+                        <form asp-controller="Todo" asp-action="UpdateTodoPage" asp-route-id="@item.Id" method="get">
+                            <input type="submit" value="Edit">
+                        </form>
+                    </td>
+                </tr>
+            }
+        </table>
+
+</body>
+</html>

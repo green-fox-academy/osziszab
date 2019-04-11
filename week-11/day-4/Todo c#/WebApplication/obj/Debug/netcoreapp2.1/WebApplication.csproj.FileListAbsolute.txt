@@ -1,0 +1,54 @@
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.deps.json
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.runtimeconfig.json
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.runtimeconfig.dev.json
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.dll
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.csprojAssemblyReference.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorAssemblyInfo.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorAssemblyInfo.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.AssemblyInfoInputs.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.AssemblyInfo.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorTargetAssemblyInfo.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.dll
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.Views.dll
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.Views.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.TagHelpers.input.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.TagHelpers.output.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorCoreGenerate.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\List.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorTargetAssemblyInfo.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.Views.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.csproj.CopyComplete
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\Create.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-3\WebApplication\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\UpdateTodoPage.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.csprojAssemblyReference.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.csproj.CoreCompileInputs.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorAssemblyInfo.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorAssemblyInfo.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.AssemblyInfoInputs.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.AssemblyInfo.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.TagHelpers.input.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.TagHelpers.output.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorCoreGenerate.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\Create.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\List.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\SearchBarResult.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Todo\UpdateTodoPage.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorTargetAssemblyInfo.cache
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.RazorTargetAssemblyInfo.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.dll
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.deps.json
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.runtimeconfig.json
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.runtimeconfig.dev.json
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.dll
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.Views.dll
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\bin\Debug\netcoreapp2.1\WebApplication.Views.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.Views.pdb
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\WebApplication.csproj.CopyComplete
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Assignee\AssigneeList.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Assignee\CreateAssignee.g.cshtml.cs
+C:\Users\Szabi\greenfox\osziszab\week-11\day-4\Todo c#\WebApplication\obj\Debug\netcoreapp2.1\Razor\Views\Assignee\UpdateAssigneePage.g.cshtml.cs
